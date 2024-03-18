@@ -44,6 +44,13 @@
                 case 'kali':
                     hasil = num1 * num2;
                     break;
+                case 'bagi':
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        result = 'Tidak bisa membagi dengan nol!';
+                    }
+                    break;
                 default:
                     hasil = 'Operator tidak valid';
             }
