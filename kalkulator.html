@@ -46,9 +46,16 @@
                     break;
                 case 'bagi':
                     if (num2 !== 0) {
-                        result = num1 / num2;
+                        hasil = num1 / num2;
                     } else {
-                        result = 'Tidak bisa membagi dengan nol!';
+                        hasil = 'Tidak bisa membagi dengan nol!';
+                    }
+                    break;
+                case 'modulus':
+                    if (num2 !== 0) {
+                        hasil = num1 % num2;
+                    } else {
+                        hasil = 'Tidak bisa modulus dengan nol!';
                     }
                     break;
                 default:
