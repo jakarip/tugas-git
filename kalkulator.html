@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        input[type="angka"] {
+            width: 100px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Kalkulator</h2>
+    <form id="calculatorForm">
+        <input type="angka" id="num1" placeholder="Masukan angka">
+        <select id="operator">
+            <option value="tambah">+</option>
+            <option value="kurang">-</option>
+            <option value="kali">*</option>
+            <option value="bagi">/</option>
+            <option value="modulus">%</option>
+        </select>
+        <input type="angka" id="num2" placeholder="Masukan angka">
+        <button type="button" onclick="kalkulasi()">Kalkulasi</button>
+    </form>
+    <p id="hasil"></p>
+
+    <script>
+        function kalkulasi() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var operator = document.getElementById('operator').value;
+            var hasil;
+
+            switch (operator) {
+                case 'tambah':
+                    hasil = num1 + num2;
+                    break;
+                default:
+                    hasil = 'Operator tidak valid';
+            }
+
+            document.getElementById('hasil').innerHTML = 'Hasil: ' + hasil;
+        }
+    </script>
+</body>
+</html>
